@@ -3,62 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kalyana Tirupathi Rao - Data Science Student">
-    <meta name="keywords" content="Data Science, Machine Learning, Python, Kalyana Tirupathi Rao">
-    <meta name="author" content="Kalyana Tirupathi Rao">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Kalyana Tirupathi Rao - Personal Website</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_TRACKING_ID');
-    </script>
+    <title>Kalyana Tirupathi Rao - Data Science Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --bg: #ffffff;
+            --text: #2c3e50;
+            --card-bg: #f8f9fa;
+        }
+
+        [data-theme="dark"] {
+            --primary: #1abc9c;
+            --bg: #2c3e50;
+            --text: #ecf0f1;
+            --card-bg: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--primary), #2c3e50);
+            color: white;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 1rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background: var(--card-bg);
+            color: var(--text);
+        }
+    </style>
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <header>
-        <img src="profile_photo.jpg" alt="Kalyana Tirupathi Rao" class="profile-photo" loading="lazy">
+        <img src="profile.jpg" alt="Kalyana Tirupathi Rao" class="profile-img">
         <h1>Kalyana Tirupathi Rao</h1>
-        <p>Data Science Student</p>
+        <p>Data Scientist | Machine Learning Enthusiast</p>
+        <p>Email: <a href="mailto:kalyanatirupathirao@gmail.com">kalyanatirupathirao@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/kalyana-tirupathi-rao">LinkedIn</a> | <a href="https://github.com/kalyana-tirupathi-rao">GitHub</a> | <a href="https://www.quora.com/profile/Kalyana-Tirupathi-Rao">Quora</a></p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>I am a passionate Data Science student with experience in Python programming and machine learning. I have completed an internship on the Edureka platform and am eager to develop my coding skills further.</p>
-        </section>
-        <section id="resume">
-            <h2>Resume</h2>
-            <embed src="ATS_Friendly_Technical_Resume__new.pdf" type="application/pdf" width="100%" height="600px" />
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="https://example.com/submit-form" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <p>Email: <a href="mailto:kalyanatirupathirao@gmail.com">kalyanatirupathirao@gmail.com</a></p>
-            <p>Phone: +91 9494747920</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kalyana-tirupathi-rao/" target="_blank"><i class="fab fa-linkedin"></i> Kalyana Tirupathi Rao</a></p>
-            <p>GitHub: <a href="https://github.com/kalyana-tirupathi-rao" target="_blank"><i class="fab fa-github"></i> kalyana-tirupathi-rao</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Kalyana Tirupathi Rao</p>
-    </footer>
+
+    <section class="section" data-aos="fade-up">
+        <h2>Technical Skills</h2>
+        <p>Python, SQL, MongoDB, Machine Learning (Scikit-learn, Pandas, NumPy, Matplotlib), Tableau, Power BI</p>
+    </section>
+
+    <section class="section" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div class="project-gallery">
+            <div class="project-card" data-aos="zoom-in">Movie Recommendation System (Python, TensorFlow)</div>
+            <div class="project-card" data-aos="zoom-in">Heart Disease Prediction (Python, Data Analysis)</div>
+            <div class="project-card" data-aos="zoom-in">Student Performance Dashboard (Tableau, SQL)</div>
+            <div class="project-card" data-aos="zoom-in">Automated Data Cleaning System (Python, Pandas)</div>
+        </div>
+    </section>
+
+    <section class="section" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+            localStorage.setItem('theme', document.body.dataset.theme);
+        });
+        document.body.dataset.theme = localStorage.getItem('theme') || '';
+    </script>
 </body>
 </html>
